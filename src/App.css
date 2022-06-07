@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.details {
+  width: 70%;
+  margin: auto;
+  height: 10rem;
+  box-shadow: 0px 0px 1rem #ccc;
+  border-radius: 1rem;
+  margin-top: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.d-flx-col {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+form {
+  padding-top: 2rem;
+  width: 60%;
+  margin: auto;
+  display: flex;
+}
+
+input {
+  width: 90%;
+  margin: auto;
+  height: 1.5rem;
+  padding: 0.25rem;
+  border-color: transparent;
+  box-shadow: 0px 0px 1rem #ccc;
+}
+
+form button {
+  width: 10%;
+  height: 2.5rem;
+  border-color: transparent;
+}
+
+
+/**
+ * ==============================================
+ * Dot Pulse from https://codepen.io/nzbin/pen/GGrXbp
+ * ==============================================
+ */
+.dot-pulse {
+  margin-top: 0.5rem;
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: #333;
+  box-shadow: 9999px 0 0 -5px #333;
+  animation: dotPulse 1.5s infinite linear;
+  animation-delay: 0.25s;
+}
+
+.dot-pulse::before,
+.dot-pulse::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: #333;
+}
+
+.dot-pulse::before {
+  box-shadow: 9984px 0 0 -5px #333;
+  animation: dotPulseBefore 1.5s infinite linear;
+  animation-delay: 0s;
+}
+
+.dot-pulse::after {
+  box-shadow: 10014px 0 0 -5px #333;
+  animation: dotPulseAfter 1.5s infinite linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes dotPulseBefore {
+  0% {
+    box-shadow: 9984px 0 0 -5px #333;
   }
-  to {
-    transform: rotate(360deg);
+  30% {
+    box-shadow: 9984px 0 0 2px #333;
+  }
+  60%,
+  100% {
+    box-shadow: 9984px 0 0 -5px #333;
+  }
+}
+
+@keyframes dotPulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px #333;
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px #333;
+  }
+  60%,
+  100% {
+    box-shadow: 9999px 0 0 -5px #333;
+  }
+}
+
+@keyframes dotPulseAfter {
+  0% {
+    box-shadow: 10014px 0 0 -5px #333;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px #333;
+  }
+  60%,
+  100% {
+    box-shadow: 10014px 0 0 -5px #333;
   }
 }
