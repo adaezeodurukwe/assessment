@@ -45,6 +45,15 @@ form button {
   border-color: transparent;
 }
 
+@media only screen and (max-width: 760px) {
+  input {
+    width: 70%;
+  }
+  form button {
+    width: 30%;
+  }
+}
+
 
 /**
  * ==============================================
