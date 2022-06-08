@@ -11,3 +11,8 @@ Show the current residence's name and address
 Show the total energy used for today
 
 Add a search box for the residence id
+
+# Start App:
+`npm start`
+# Run tests:
+`npm test`

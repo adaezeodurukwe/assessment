@@ -28,7 +28,7 @@ const Home = () => {
               <strong>Address</strong> {residentData.address}
             </span>
             <span className="d-flx-col mt-2">
-              <strong>Energy Usage</strong> {residentData.energy}
+              <strong>Energy Usage</strong> {residentData.energy.toFixed(2)}
             </span>
           </div>
         ) : (
